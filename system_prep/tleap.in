@@ -1,0 +1,16 @@
+# Load the necessary force fields
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+
+# Load the PDB file with the dummy oxygen atom
+dummy = loadPdb dummy.pdb
+
+# Solvate the dummy oxygen atom using TIP3P water
+solvateBox dummy TIP3PBOX 12.0
+
+# Remove the dummy atom
+remove dummy dummy.1
+
+# Save the resultant system
+saveAmberParm dummy water_box.prmtop water_box.inpcrd
+quit

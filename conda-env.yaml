@@ -1,0 +1,13 @@
+name: chem274A_lab2
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - openmm
+  - jupyterlab
+  - matplotlib
+  - nglview
+  - mdanalysis
+  - statsmodels
